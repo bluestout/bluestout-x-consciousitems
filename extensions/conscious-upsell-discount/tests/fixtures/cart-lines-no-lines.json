@@ -7,7 +7,7 @@
         "lines": []
       },
       "discount": {
-        "discountClasses": ["ORDER", "PRODUCT"]
+        "discountClasses": ["PRODUCT"]
       }
     },
     "output": {

@@ -7,10 +7,14 @@
         "lines": [
           {
             "id": "gid://shopify/CartLine/0",
+            "quantity": 1,
             "cost": {
-              "subtotalAmount": {
-                "amount": "100.0"
+              "amountPerQuantity": {
+                "amount": "20.0"
               }
+            },
+            "upsellPrice": {
+              "value": "9"
             }
           }
         ]

@@ -2,10 +2,14 @@ query CartInput {
   cart {
     lines {
       id
+      quantity
       cost {
-        subtotalAmount {
+        amountPerQuantity {
           amount
         }
+      }
+      upsellPrice: attribute(key: "_upsell_price") {
+        value
       }
     }
   }

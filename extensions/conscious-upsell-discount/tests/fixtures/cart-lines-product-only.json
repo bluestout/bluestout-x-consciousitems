@@ -7,10 +7,14 @@
         "lines": [
           {
             "id": "gid://shopify/CartLine/0",
+            "quantity": 2,
             "cost": {
-              "subtotalAmount": {
-                "amount": "100.0"
+              "amountPerQuantity": {
+                "amount": "20.0"
               }
+            },
+            "upsellPrice": {
+              "value": "9"
             }
           }
         ]
@@ -25,7 +29,7 @@
           "productDiscountsAdd": {
             "candidates": [
               {
-                "message": "20% OFF PRODUCT",
+                "message": "Upsell price 9",
                 "targets": [
                   {
                     "cartLine": {
@@ -34,13 +38,14 @@
                   }
                 ],
                 "value": {
-                  "percentage": {
-                    "value": 20.0
+                  "fixedAmount": {
+                    "amount": "11.00",
+                    "appliesToEachItem": true
                   }
                 }
               }
             ],
-            "selectionStrategy": "FIRST"
+            "selectionStrategy": "ALL"
           }
         }
       ]

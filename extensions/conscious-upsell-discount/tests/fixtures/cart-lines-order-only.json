@@ -7,43 +7,34 @@
         "lines": [
           {
             "id": "gid://shopify/CartLine/0",
+            "quantity": 1,
             "cost": {
-              "subtotalAmount": {
-                "amount": "100.0"
+              "amountPerQuantity": {
+                "amount": "5.0"
               }
+            },
+            "upsellPrice": {
+              "value": "9"
             }
+          },
+          {
+            "id": "gid://shopify/CartLine/1",
+            "quantity": 1,
+            "cost": {
+              "amountPerQuantity": {
+                "amount": "30.0"
+              }
+            },
+            "upsellPrice": null
           }
         ]
       },
       "discount": {
-        "discountClasses": ["ORDER"]
+        "discountClasses": ["PRODUCT"]
       }
     },
     "output": {
-      "operations": [
-        {
-          "orderDiscountsAdd": {
-            "candidates": [
-              {
-                "message": "10% OFF ORDER",
-                "targets": [
-                  {
-                    "orderSubtotal": {
-                      "excludedCartLineIds": []
-                    }
-                  }
-                ],
-                "value": {
-                  "percentage": {
-                    "value": 10.0
-                  }
-                }
-              }
-            ],
-            "selectionStrategy": "FIRST"
-          }
-        }
-      ]
+      "operations": []
     }
   }
 }

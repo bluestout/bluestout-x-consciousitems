@@ -7,10 +7,38 @@
         "lines": [
           {
             "id": "gid://shopify/CartLine/0",
+            "quantity": 1,
             "cost": {
-              "subtotalAmount": {
-                "amount": "6.0"
+              "amountPerQuantity": {
+                "amount": "49.0"
               }
+            },
+            "upsellPrice": {
+              "value": "0"
+            }
+          },
+          {
+            "id": "gid://shopify/CartLine/1",
+            "quantity": 1,
+            "cost": {
+              "amountPerQuantity": {
+                "amount": "30.0"
+              }
+            },
+            "upsellPrice": {
+              "value": ""
+            }
+          },
+          {
+            "id": "gid://shopify/CartLine/2",
+            "quantity": 3,
+            "cost": {
+              "amountPerQuantity": {
+                "amount": "15.0"
+              }
+            },
+            "upsellPrice": {
+              "value": "4"
             }
           }
         ]
@@ -19,36 +47,13 @@
         "discountClasses": ["PRODUCT", "ORDER", "SHIPPING"]
       }
     },
-    "inputBytes": 126,
     "output": {
       "operations": [
-        {
-          "orderDiscountsAdd": {
-            "candidates": [
-              {
-                "message": "10% OFF ORDER",
-                "targets": [
-                  {
-                    "orderSubtotal": {
-                      "excludedCartLineIds": []
-                    }
-                  }
-                ],
-                "value": {
-                  "percentage": {
-                    "value": 10.0
-                  }
-                }
-              }
-            ],
-            "selectionStrategy": "FIRST"
-          }
-        },
         {
           "productDiscountsAdd": {
             "candidates": [
               {
-                "message": "20% OFF PRODUCT",
+                "message": "Upsell price 0",
                 "targets": [
                   {
                     "cartLine": {
@@ -57,13 +62,30 @@
                   }
                 ],
                 "value": {
-                  "percentage": {
-                    "value": 20.0
+                  "fixedAmount": {
+                    "amount": "49.00",
+                    "appliesToEachItem": true
+                  }
+                }
+              },
+              {
+                "message": "Upsell price 4",
+                "targets": [
+                  {
+                    "cartLine": {
+                      "id": "gid://shopify/CartLine/2"
+                    }
+                  }
+                ],
+                "value": {
+                  "fixedAmount": {
+                    "amount": "11.00",
+                    "appliesToEachItem": true
                   }
                 }
               }
             ],
-            "selectionStrategy": "FIRST"
+            "selectionStrategy": "ALL"
           }
         }
       ]
