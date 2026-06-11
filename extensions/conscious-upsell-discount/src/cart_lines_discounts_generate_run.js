@@ -61,7 +61,6 @@ export function cartLinesDiscountsGenerateRun(input) {
     const discountPerItem = perUnit - target;
 
     candidates.push({
-      message: `Upsell price ${target}`,
       targets: [
         {
           cartLine: {

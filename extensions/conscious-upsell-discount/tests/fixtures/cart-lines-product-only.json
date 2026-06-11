@@ -29,7 +29,6 @@
           "productDiscountsAdd": {
             "candidates": [
               {
-                "message": "Upsell price 9",
                 "targets": [
                   {
                     "cartLine": {
